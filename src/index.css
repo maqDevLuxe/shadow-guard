@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 11% 5%;
+    --foreground: 40 10% 85%;
+
+    --card: 210 10% 8%;
+    --card-foreground: 40 10% 85%;
+
+    --popover: 210 10% 8%;
+    --popover-foreground: 40 10% 85%;
+
+    --primary: 43 85% 38%;
+    --primary-foreground: 210 11% 5%;
+
+    --secondary: 200 12% 22%;
+    --secondary-foreground: 40 10% 85%;
+
+    --muted: 200 8% 15%;
+    --muted-foreground: 200 8% 50%;
+
+    --accent: 43 85% 38%;
+    --accent-foreground: 210 11% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 8% 18%;
+    --input: 200 8% 18%;
+    --ring: 43 85% 38%;
+
+    --radius: 0.25rem;
+
+    --gunmetal: 200 12% 22%;
+    --gold: 43 85% 38%;
+    --gold-light: 43 70% 55%;
+    --vanta: 210 11% 5%;
+    --vanta-deep: 0 0% 3%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    cursor: crosshair;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase tracking-wider;
+  }
+
+  a, button {
+    cursor: crosshair;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-24 md:px-12 lg:px-24 xl:px-32;
+  }
+
+  .gold-line {
+    @apply h-px bg-gradient-to-r from-transparent via-primary to-transparent;
+  }
+
+  .gold-text {
+    @apply text-primary;
+  }
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-md border border-border/50;
+  }
+
+  .text-mask-in {
+    @apply overflow-hidden;
+  }
+}
